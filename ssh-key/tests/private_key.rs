@@ -3,15 +3,15 @@
 #![allow(clippy::unwrap_used, reason = "tests")]
 
 use hex_literal::hex;
-use ssh_key::{Algorithm, Cipher, KdfAlg, PrivateKey};
+use hussh_rustcrypto_ssh_key::{Algorithm, Cipher, KdfAlg, PrivateKey};
 
 #[cfg(any(feature = "p256", feature = "p384", feature = "p521"))]
-use ssh_key::EcdsaCurve;
+use hussh_rustcrypto_ssh_key::EcdsaCurve;
 #[cfg(feature = "alloc")]
-use ssh_key::LineEnding;
+use hussh_rustcrypto_ssh_key::LineEnding;
 #[cfg(feature = "std")]
 use {
-    ssh_key::PublicKey,
+    hussh_rustcrypto_ssh_key::PublicKey,
     std::{io, path::PathBuf, process},
 };
 

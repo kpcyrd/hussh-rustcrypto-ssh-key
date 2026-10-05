@@ -3,7 +3,7 @@
 #![cfg(feature = "std")]
 
 use hex_literal::hex;
-use ssh_key::{Algorithm, DotSsh, Fingerprint};
+use hussh_rustcrypto_ssh_key::{Algorithm, DotSsh, Fingerprint};
 
 /// Open `.ssh` using the `test/examples`.
 fn dot_ssh() -> DotSsh {

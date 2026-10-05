@@ -39,8 +39,8 @@ use crate::{Error, PrivateKey};
     not(all(feature = "ed25519", feature = "getrandom")),
     doc = " ```ignore"
 )]
-/// # fn main() -> Result<(), ssh_key::Error> {
-/// use ssh_key::{Algorithm, PrivateKey, certificate, getrandom::SysRng, rand_core::UnwrapErr};
+/// # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+/// use hussh_rustcrypto_ssh_key::{Algorithm, PrivateKey, certificate, getrandom::SysRng, rand_core::UnwrapErr};
 /// use std::time::{SystemTime, UNIX_EPOCH};
 ///
 /// // Generate the certificate authority's private key

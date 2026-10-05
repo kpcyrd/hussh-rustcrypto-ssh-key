@@ -6,13 +6,13 @@
 use core::str::FromStr;
 use encoding::{Base64Reader, Decode, Encode, Reader};
 use hex_literal::hex;
-use ssh_key::{Algorithm, Certificate, public::KeyData};
+use hussh_rustcrypto_ssh_key::{Algorithm, Certificate, public::KeyData};
 
 #[cfg(feature = "ecdsa")]
-use ssh_key::EcdsaCurve;
+use hussh_rustcrypto_ssh_key::EcdsaCurve;
 
 #[cfg(feature = "rsa")]
-use ssh_key::HashAlg;
+use hussh_rustcrypto_ssh_key::HashAlg;
 
 /// DSA OpenSSH Certificate
 const DSA_CERT_EXAMPLE: &str = include_str!("examples/id_dsa_1024-cert.pub");

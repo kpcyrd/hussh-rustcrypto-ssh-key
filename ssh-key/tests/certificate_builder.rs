@@ -8,10 +8,10 @@
 
 use chacha20::{ChaCha8Rng, rand_core::SeedableRng};
 use hex_literal::hex;
-use ssh_key::{Algorithm, PrivateKey, certificate};
+use hussh_rustcrypto_ssh_key::{Algorithm, PrivateKey, certificate};
 
 #[cfg(feature = "p256")]
-use ssh_key::EcdsaCurve;
+use hussh_rustcrypto_ssh_key::EcdsaCurve;
 
 #[cfg(all(feature = "ed25519", feature = "rsa"))]
 use core::str::FromStr;

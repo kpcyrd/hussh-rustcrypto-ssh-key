@@ -12,8 +12,8 @@
 //!
 #![cfg_attr(feature = "encryption", doc = " ```")]
 #![cfg_attr(not(feature = "encryption"), doc = " ```ignore")]
-//! # fn main() -> Result<(), ssh_key::Error> {
-//! use ssh_key::PrivateKey;
+//! # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+//! use hussh_rustcrypto_ssh_key::PrivateKey;
 //!
 //! // WARNING: don't actually hardcode private keys in source code!!!
 //! let encoded_key = r#"
@@ -54,8 +54,8 @@
     not(all(feature = "ed25519", feature = "encryption", feature = "getrandom",)),
     doc = " ```ignore"
 )]
-//! # fn main() -> Result<(), ssh_key::Error> {
-//! use ssh_key::{Algorithm, PrivateKey, getrandom::SysRng, rand_core::UnwrapErr};
+//! # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+//! use hussh_rustcrypto_ssh_key::{Algorithm, PrivateKey, getrandom::SysRng, rand_core::UnwrapErr};
 //!
 //! // Generate a random key
 //! let mut rng = UnwrapErr(SysRng);
@@ -84,8 +84,8 @@
     not(all(feature = "ed25519", feature = "getrandom")),
     doc = " ```ignore"
 )]
-//! # fn main() -> Result<(), ssh_key::Error> {
-//! use ssh_key::{Algorithm, PrivateKey, getrandom::SysRng, rand_core::UnwrapErr};
+//! # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+//! use hussh_rustcrypto_ssh_key::{Algorithm, PrivateKey, getrandom::SysRng, rand_core::UnwrapErr};
 //!
 //! let mut rng = UnwrapErr(SysRng);
 //! let private_key = PrivateKey::random(&mut rng, Algorithm::Ed25519)?;
@@ -322,8 +322,8 @@ impl PrivateKey {
     ///
     #[cfg_attr(feature = "ed25519", doc = "```")]
     #[cfg_attr(not(feature = "ed25519"), doc = "```ignore")]
-    /// # fn main() -> Result<(), ssh_key::Error> {
-    /// use ssh_key::{PrivateKey, HashAlg, SshSig};
+    /// # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+    /// use hussh_rustcrypto_ssh_key::{PrivateKey, HashAlg, SshSig};
     ///
     /// // Message to be signed.
     /// let message = b"testing";

@@ -70,8 +70,8 @@ use {
 ///
 #[cfg_attr(all(feature = "p256", feature = "std"), doc = " ```")]
 #[cfg_attr(not(all(feature = "p256", feature = "std")), doc = " ```ignore")]
-/// # fn main() -> Result<(), ssh_key::Error> {
-/// use ssh_key::{Certificate, Fingerprint};
+/// # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+/// use hussh_rustcrypto_ssh_key::{Certificate, Fingerprint};
 /// use std::str::FromStr;
 ///
 /// // List of trusted certificate authority (CA) fingerprints

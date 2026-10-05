@@ -27,14 +27,14 @@
 //! #### Example
 //!
 //! ```
-//! # fn main() -> Result<(), ssh_key::Error> {
-//! use ssh_key::PublicKey;
+//! # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+//! use hussh_rustcrypto_ssh_key::PublicKey;
 //!
 //! let encoded_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILM+rvN+ot98qgEN796jTiQfZfG1KaT0PtFDJ/XFSqti user@example.com";
 //! let public_key = PublicKey::from_openssh(encoded_key)?;
 //!
 //! // Key attributes
-//! assert_eq!(public_key.algorithm(), ssh_key::Algorithm::Ed25519);
+//! assert_eq!(public_key.algorithm(), hussh_rustcrypto_ssh_key::Algorithm::Ed25519);
 //!
 //! // Key data: in this example an Ed25519 key
 //! if let Some(ed25519_public_key) = public_key.key_data().ed25519() {
@@ -64,8 +64,8 @@
 //! #### Example
 //!
 //! ```
-//! # fn main() -> Result<(), ssh_key::Error> {
-//! use ssh_key::PrivateKey;
+//! # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+//! use hussh_rustcrypto_ssh_key::PrivateKey;
 //!
 //! // WARNING: don't actually hardcode private keys in source code!!!
 //! let encoded_key = r#"
@@ -81,7 +81,7 @@
 //! let private_key = PrivateKey::from_openssh(encoded_key)?;
 //!
 //! // Key attributes
-//! assert_eq!(private_key.algorithm(), ssh_key::Algorithm::Ed25519);
+//! assert_eq!(private_key.algorithm(), hussh_rustcrypto_ssh_key::Algorithm::Ed25519);
 //!
 //! // Key data: in this example an Ed25519 key
 //! if let Some(ed25519_keypair) = private_key.key_data().ed25519() {

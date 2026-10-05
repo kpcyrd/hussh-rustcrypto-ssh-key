@@ -3,7 +3,7 @@
 #![cfg(feature = "alloc")]
 
 use core::str::FromStr;
-use ssh_key::AlgorithmName;
+use hussh_rustcrypto_ssh_key::AlgorithmName;
 
 #[test]
 fn additional_algorithm_name() {

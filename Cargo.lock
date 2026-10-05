@@ -434,6 +434,34 @@ dependencies = [
 ]
 
 [[package]]
+name = "hussh-rustcrypto-ssh-key"
+version = "0.7.0"
+dependencies = [
+ "argon2",
+ "bcrypt-pbkdf",
+ "chacha20",
+ "ctutils",
+ "dsa",
+ "ed25519-dalek",
+ "getrandom",
+ "hex",
+ "hex-literal",
+ "hmac",
+ "p256",
+ "p384",
+ "p521",
+ "rand_core",
+ "sec1",
+ "serde",
+ "sha1",
+ "sha2",
+ "signature",
+ "ssh-cipher",
+ "ssh-encoding",
+ "zeroize",
+]
+
+[[package]]
 name = "hybrid-array"
 version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -640,22 +668,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rsa"
-version = "0.10.0-rc.18"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30b2aa4ba0d89f73d1e332df05be0eeab8840351c36ca5654341dfdb57bb3caf"
-dependencies = [
- "const-oid",
- "crypto-bigint",
- "crypto-primes",
- "digest",
- "rand_core",
- "sha2",
- "signature",
- "zeroize",
-]
-
-[[package]]
 name = "rustc_version"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -799,25 +811,10 @@ dependencies = [
 [[package]]
 name = "ssh-key"
 version = "0.7.0-rc.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9a32fae177b74a22aa9c5b01bf7e68b33545be32d9e381e248058d2adc15ce3"
 dependencies = [
- "argon2",
- "bcrypt-pbkdf",
- "chacha20",
  "ctutils",
- "dsa",
- "ed25519-dalek",
- "getrandom",
- "hex",
- "hex-literal",
- "hmac",
- "p256",
- "p384",
- "p521",
- "rand_core",
- "rsa",
- "sec1",
- "serde",
- "sha1",
  "sha2",
  "signature",
  "ssh-cipher",

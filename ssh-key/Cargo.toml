@@ -1,12 +1,7 @@
 [package]
-name = "ssh-key"
-version = "0.7.0-rc.11"
-description = """
-Pure Rust implementation of SSH key file format decoders/encoders as described
-in RFC4251/RFC4253 and OpenSSH key formats, as well as "sshsig" signatures and
-certificates (including certificate validation and certificate authority support),
-with further support for the `authorized_keys` and `known_hosts` file formats.
-"""
+name = "hussh-rustcrypto-ssh-key"
+version = "0.7.0"
+description = "Fork of ssh-key compatible with latest RustCrypto ecosystem"
 authors = ["RustCrypto Developers"]
 license = "Apache-2.0 OR MIT"
 homepage = "https://github.com/RustCrypto/SSH/tree/master/ssh-key"
@@ -36,7 +31,6 @@ p256 = { version = "0.14", optional = true, default-features = false, features =
 p384 = { version = "0.14", optional = true, default-features = false, features = ["ecdsa"] }
 p521 = { version = "0.14", optional = true, default-features = false, features = ["ecdsa"] }
 rand_core = { version = "0.10", optional = true, default-features = false }
-rsa = { version = "0.10.0-rc.18", optional = true, default-features = false, features = ["sha2"] }
 sec1 = { version = "0.8", optional = true, default-features = false, features = ["point"] }
 serde = { version = "1.0.16", optional = true }
 sha1 = { version = "0.11", optional = true, default-features = false, features = ["oid"] }
@@ -51,7 +45,7 @@ default = ["ecdsa", "rand_core", "std"]
 alloc = ["encoding/alloc", "signature/alloc", "zeroize/alloc", ]
 std = ["alloc"]
 
-crypto = ["ed25519", "p256", "p384", "p521", "rsa"] # NOTE: `dsa` is obsolete/weak
+crypto = ["ed25519", "p256", "p384", "p521"] # NOTE: `dsa` is obsolete/weak
 dsa = ["dep:dsa", "dep:sha1", "alloc", "encoding/bigint", "signature/rand_core"]
 ecdsa = ["dep:sec1"]
 ed25519 = ["dep:ed25519-dalek", "rand_core"]
@@ -68,7 +62,6 @@ p384 = ["dep:p384", "ecdsa"]
 p521 = ["dep:p521", "ecdsa"]
 ppk = ["dep:hex", "alloc", "cipher/aes", "dep:hmac", "dep:argon2", "dep:sha1"]
 rand_core = ["dep:rand_core", "cipher/rand_core"]
-rsa = ["dep:rsa", "alloc", "encoding/bigint", "rand_core"]
 sha1 = ["dep:sha1"]
 tdes = ["cipher/tdes", "encryption"]
 

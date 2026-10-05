@@ -215,8 +215,8 @@ impl PublicKey {
     ///
     #[cfg_attr(feature = "ed25519", doc = "```")]
     #[cfg_attr(not(feature = "ed25519"), doc = "```ignore")]
-    /// # fn main() -> Result<(), ssh_key::Error> {
-    /// use ssh_key::{PublicKey, SshSig};
+    /// # fn main() -> Result<(), hussh_rustcrypto_ssh_key::Error> {
+    /// use hussh_rustcrypto_ssh_key::{PublicKey, SshSig};
     ///
     /// // Message to be verified.
     /// let message = b"testing";

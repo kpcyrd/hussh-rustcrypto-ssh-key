@@ -12,7 +12,7 @@ members = [
 ssh-cipher = { path = "./ssh-cipher" }
 ssh-derive = { path = "./ssh-derive" }
 ssh-encoding = { path = "./ssh-encoding" }
-ssh-key = { path = "./ssh-key" }
+#ssh-key = { path = "./ssh-key" }
 
 [profile.dev]
 opt-level = 2
