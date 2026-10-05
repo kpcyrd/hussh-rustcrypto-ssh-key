@@ -2,6 +2,33 @@
 
 Pure Rust implementation of components of the Secure Shell ([SSH]) protocol.
 
+This is a fork of the RustCrypto SSH repository, with all dependencies of the
+`ssh-key` crate updated to the latest RustCrypto ecosystem, and the RSA feature
+removed (since that may still take some time).
+
+Since the Debian-Rust tooling doesn't support RC versions, forking into a
+different crate name and a non-RC version allows immediate upload, which in
+turn would unblock a new upload of russh, which in turn would address the
+following in Debian sid:
+
+- CVE-2026-42189
+- CVE-2026-46673
+- CVE-2026-46702
+- CVE-2026-46705
+- CVE-2026-48107
+- CVE-2026-48108
+- CVE-2026-48110
+- CVE-2026-68930
+- CVE-2026-73429
+- CVE-2026-73430
+- CVE-2026-73489
+- CVE-2026-102820
+- CVE-2026-102821
+- CVE-2026-102822
+- CVE-2026-102823
+- CVE-2026-102824
+- CVE-2026-102825
+
 ## Crates
 
 | Name           | crates.io                                                                                               | Docs                                                                                     | Description                                          |
